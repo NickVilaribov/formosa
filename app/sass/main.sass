@@ -1,0 +1,854 @@
+@import "vars"
+@import "fonts"
+@import "helper"
+@import "libs"
+@import "_mixins/placeholder"
+
+body
+	font-size: 16px
+	min-width: 300px
+	position: relative
+	line-height: 1.65
+	font-family: $first-font
+	overflow-x: hidden
+	letter-spacing: 0.2px
+	background-image: url(../img/bcg.svg)
+	background-position: top center
+	background-repeat: np-repeat
+	&.teampage
+		background-size: cover
+		background-image: url(../img/otherpage-bg.svg)
+	&.partnerspage
+		background-size: cover
+		background-image: url(../img/otherpage-bg.svg)	
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+	svg
+		width: 0
+		height: 0
+		position: absolute
+
+header
+	margin-top: 2.8rem
+	.logoplace
+		height: 61px
+		display: inline-block
+		width: auto
+		margin-right: 2.25rem
+	.community
+		display: inline-block
+		padding-top: 0.7rem
+		.title
+			font-family: $second-font
+			font-size: 0.875rem
+			color: $f2
+		.icons
+			a
+				margin-right: 0.5rem
+	.main-mnu
+		margin-left: auto
+		ul
+			display: inline-block
+			padding-left: 0
+			margin-bottom: 0
+			li
+				display: inline-block	
+				margin-right: 2.25rem
+				&:last-child
+					margin-right: 0
+				a
+					color: #012169
+					font-weight: 500
+					&:hover
+						color: $a1				
+		.lang
+			display: inline-block
+			color: #2DB6E6
+			font-weight: 500
+			margin-left: 2.25rem
+	.burger
+		margin-left: auto
+		cursor: pointer
+
+.mobile-navigation
+	position: fixed
+	top: 0
+	right: -100%
+	width: 100%
+	height: 100%
+	overflow-y: auto
+	-webkit-overflow-scrolling: touch
+	background-color: #fff
+	text-align: center
+	z-index: 21
+	transition: all 0.3s ease
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	&.active
+		right: 0%
+	.mobile-mnu-header
+		margin-top: 2.8rem
+		.close
+			cursor: pointer
+	.mobile-mnu-body
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		ul
+			list-style-type: none
+			text-align: left
+			margin-top: 4rem
+			padding-left: 0
+			li
+				margin-bottom: 1rem
+				position: relative
+				padding-left: 4rem	
+				a
+					font-size: 1.5rem
+					color: #012169
+					font-weight: 600
+				&:before
+					content: ''
+					position: absolute
+					bottom: 12px
+					left: 0
+					width: 42px
+					height: 2px
+					background: $a1
+					opacity: 0
+					transition: all 0.3s ease	
+				&.active
+					&:before
+						opacity: 1
+					a
+						color: $a1
+				&:hover
+					a
+						color: $a1			
+	.mobile-mnu-bottom
+		background-color: #E8E8E8
+		padding-top: 26px
+		padding-bottom: 32px
+		text-align: left
+		.community
+			margin-left: 4rem	
+			.title
+				font-size: 0.875rem
+				color: #485056
+			.icons
+				a
+					margin-right: 0.75rem	
+.title-line
+	position: relative
+	&:after
+		content: ''
+		position: absolute
+		top: 12.2rem
+		left: 10px
+		background: $f1
+		width: 64px
+		height: 2px
+	&.small
+		&:after
+			top: 11.15rem	
+
+.section-title
+	margin-top: 8.75rem
+	font-family: $second-font
+	color: $f2
+	margin-bottom: 1.5rem
+	.dark
+		&.active
+			color: $f1
+.section-desc
+	color: $f2
+	font-size: 1.125rem
+	width: 70%
+	font-weight: 300
+	margin-bottom: 4rem			
+
+.main-slide
+	h1
+		font-size: 3.75rem
+	.btn
+		margin-top: 0rem
+		display: inline-block
+	.section-desc
+		&.team
+			width: 80%
+	.animation-img-wrapper
+		position: relative
+		padding-bottom: 115%
+		overflow: hidden
+		.img-layer
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			width: 100%
+			height: auto
+
+.second-slide
+	.animation-img-wrapper
+		position: relative
+		padding-bottom: 90%
+		overflow: hidden
+		margin-top: 1rem
+		.img-layer
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			width: 100%
+			height: auto
+	.btn
+		display: inline-block
+		padding-left: 1.25rem
+		padding-right: 1.25rem
+		img
+			padding-bottom: 0.2rem
+			transition: all 0.3s ease
+		&:hover
+			img
+				transform: scale(1.2)	
+
+.third-slide
+	.section-img-wrapper
+		margin-top: 2rem
+	.section-desc
+		width: 100%	
+.fourth-slide
+	.section-desc
+		width: 70%
+	.btn
+		display: inline-block
+.fifth-slide
+	.section-title
+		margin-bottom: 8.125rem
+	.sale-desc-wrapper
+		position: relative
+		padding-top: 1.5rem
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: 10px
+			width: 44px
+			height: 2px
+			background: $f2
+	.canvas-wrapper
+		position: relative
+		#canvas
+		img
+			width: 100%
+			height: auto
+	.legend-item
+		width: 100%
+		margin-bottom: 2rem
+		margin-left: 1.5rem
+		.desc
+			text-transform: uppercase
+			font-size: 0.875rem
+			margin-top: 0.25rem
+			font-weight: 500
+			color: $f2	
+		.box
+			height: 10px
+		&.first
+			&.active
+				.box
+					width: 30%
+			.box
+				transition: all 2s ease
+				width: 1%
+				background-color: #012169
+			.desc
+				span
+					color: #012169	
+		&.second
+			&.active
+				.box
+					width: 25%
+			.box
+				transition: all 2s ease
+				width: 1%
+				background-color: #2DB6E6
+			.desc
+				span
+					color: #2DB6E6
+		&.third
+			&.active
+				.box
+					width: 15%
+			.box
+				transition: all 2s ease
+				width: 1%
+				background-color: #945F37
+			.desc
+				span
+					color: #945F37
+		&.fourth
+			&.active
+				.box
+					width: 15%
+			.box
+				transition: all 2s ease
+				width: 1%
+				background-color: #C6AA76
+			.desc
+				span
+					color: #C6AA76	
+		&.fifth
+			&.active
+				.box
+					width: 10%
+			.box
+				transition: all 2s ease
+				width: 1%
+				background-color: #D1CCC7
+			.desc
+				span
+					color: #D1CCC7
+		&.sixth
+			&.active
+				.box
+					width: 5%
+			.box
+				transition: all 2s ease
+				width: 1%
+				background-color: #768691
+			.desc
+				span
+					color: #768691				
+								
+	.sale-item
+		padding-top: 1.5rem
+		padding-bottom: 1.5rem
+		border-bottom: 1px solid #CFCFCF
+		&:last-child
+			border-bottom: none
+		.first
+			display: block
+			font-size: 1.5rem
+			font-weight: 300
+			line-height: 1
+			color: $f2
+		.second
+			display: block
+			font-size: 2.25rem
+			font-family: $second-font
+			font-weight: 600		
+
+.partners-carousel
+	margin-top: 4rem
+	position: relative
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 40px
+		background-image: url(../img/partner-bg.svg)
+		background-position: top center
+		background-size: cover
+	&.owl-theme
+		.owl-nav
+			position: absolute
+			bottom: 1px
+			left: 0
+			right: 0
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			justify-content: space-between
+			.owl-next
+				&:hover
+					background: none
+			.owl-prev
+				&:hover
+					background: none
+		.owl-dots
+			padding-top: 2rem 
+			.owl-dot
+				span
+					width: 9px
+					height: 9px
+					margin: 5px 5px
+					background: #E8E8E8
+				&.active, &:hover
+					span
+						transition: all 0.3s ease
+						background: $a1
+.sixth-slide
+	.section-desc
+		width: 100%
+	.section-img-wrapper
+		margin-top: 1rem
+.seventh-slide
+	margin-bottom: 5rem
+	.section-title
+		margin-bottom: 5rem
+.press-item-wrapper
+	padding-bottom: 88%
+	width: 100%
+	position: relative
+.press-carousel
+	.owl-dots
+		.owl-dot
+			span
+				background: #E8E8E8
+				transition: all 0.3s ease
+			&.active, &:hover
+				span
+					background: $a1
+
+.press-item
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	padding: 1.75rem 1rem 1.75rem 1rem
+	margin-bottom: 1rem
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	align-items: center
+	background-image: url(../img/press-bg.svg)
+	background-color: #fff
+	background-repeat: no-repeat
+	background-position: top right
+	-webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.15)
+	-moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.15)
+	box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.15)
+	&.fixed
+		position: relative
+		min-height: 300px
+		margin-left: 10px
+		margin-right: 10px
+		img
+			width: auto
+			margin: 1rem auto
+	.title
+		font-family: $second-font
+		font-weight: 600
+		text-transform: uppercase
+		color: $f2
+		width: 80%
+	img
+		margin-bottom: 1.25rem	
+	a
+		display: block
+		color: $f3
+		font-size: 0.625rem
+		line-height: 1.4
+	.bottom-line
+		a
+			min-height: 28px
+			align-items: flex-end
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex						
+.team-slide
+	.section-title
+		margin-bottom: 3.5rem
+
+.team-item
+	margin-bottom: 4rem
+	.img-wrapper
+		position: relative
+		margin-bottom: 0.5rem
+		.partners-wrapper
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			justify-content: center
+			img
+				min-width: 100%
+		img
+			width: 100%
+		.env-img-wrapper
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			justify-content: center
+		.env-img
+			width: 70%
+			height: auto
+			border-radius: 100%	
+			background-position: center
+			background-size: cover
+			background-repeat: no-repeat
+	.env-link-row
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-direction: column
+		.link
+			margin-bottom: 0.5rem
+			img
+				transition: all 0.3s ease
+			&:first-child
+				margin-top: 1.875rem
+			&:hover
+				img
+					transform: scale(1.15)
+	.env-name
+		font-family: $second-font
+		font-size: 1.5rem
+		color: $f2
+		line-height: 1.4
+		font-weight: 600			
+	.env-position
+		font-family: $second-font
+		font-size: 1rem
+		color: $a1
+		margin-bottom: 1rem
+	.env-desc
+		font-size: 0.875rem
+		color: #959595
+		line-height: 1.5
+		a
+			color: #2DB6E6
+.advisors-slide
+	padding-bottom: 6rem
+	.section-title
+		margin-top: 2rem
+		margin-bottom: 3.5rem
+	.title-line
+		&:after
+			top: 4.75rem
+.partnes-slide
+	.section-title
+		margin-bottom: 7rem
+	.team-item
+		margin-bottom: 2.5rem
+		&:nth-child(3)
+			margin-right: 24.99999%
+		&:nth-child(6)
+			margin-right: 24.99999%
+		&:nth-child(9)
+			margin-right: 24.99999%
+		&:hover
+			.partners-wrapper
+				a
+					transform: translate(0, -1rem)
+.join-slide
+	padding-bottom: 8rem	
+	.section-title
+		margin-bottom: 1rem
+	p
+		font-size: 1.125rem
+		line-height: 1.4
+		color: $f2
+
+footer
+	padding-top: 3.125rem
+	padding-bottom: 4.375rem
+	background-color: #3C3C3C
+	letter-spacing: 0.8px
+	.first-row
+		padding-bottom: 3.875rem
+	.second-row
+		border-top: 1px solid #999
+		padding-top: 2rem	
+	.form-desc
+		font-size: 0.65rem
+		color: #959595
+		font-family: $second-font
+		width: 40%
+		line-height: 1.4
+	.column-title
+		font-family: $second-font
+		font-size: 0.875rem
+		font-weight: 600
+		color: #CFCFCF
+		letter-spacing: 1px
+		margin-bottom: 1.5rem
+	.copyright
+		font-family: $second-font
+		font-size: 0.75rem
+		color: #959595
+		line-height: 1.5
+		letter-spacing: 0.8px
+	.terms-links
+		a
+			font-family: $second-font
+			font-size: 0.75rem
+			color: $a2
+			margin-left: 2.5rem
+			font-weight: 400
+			letter-spacing: 0.8px
+			&:hover
+				color: #fff
+			&:first-child
+				margin-left: 0	
+
+	ul
+		margin: 0
+		padding: 0
+		list-style-type: none
+		li
+			margin-bottom: 0.75rem
+			a
+				font-family: $second-font
+				font-size: 0.75rem
+				font-weight: 400
+				color: #CFCFCF
+				letter-spacing: 1px
+				&:hover
+					color: $a2
+				img
+					margin-right: 0.675rem	
+				
+.form-title
+		font-size: 1.5rem
+		font-family: $second-font
+		font-weight: 600
+		color: #fff
+		margin-bottom: 3rem
+		letter-spacing: 0.6px		
+.main-callback-form
+	width: 55%
+	position: relative
+	margin-bottom: 0.25rem
+	font-weight: 400
+	.btn
+		position: absolute
+		right: 0
+		top: 0.75rem
+		cursor: pointer
+		width: 24px
+		height: 24px
+		background-color: transparent
+		border: none
+		padding: 0
+		background-image: url(../img/submit.svg)
+		background-repeat: no-repeat
+		background-position: 100% 2px
+	input,textarea
+		width: 100%
+		margin-bottom: 0.5rem
+		background-color: transparent
+		border-top: none
+		border-right: none
+		border-left: none
+		border-bottom: 2px solid #fff
+		border-radius: 0px
+		font-size: 1.125rem
+		padding: 0.5rem 2rem 0.5rem 0rem
+		font-family: $second-font
+		color: #fff
+		&:focus
+			border-bottom: 2px solid $a2 !important
+		&:required
+			&:valid
+				border-bottom: 2px solid $a2 !important
+	@include placeholder
+		color: #959595
+	.form-success    
+		display: none
+		font-size: 1.5rem
+		font-family: $second-font
+		position: absolute
+		z-index: 11
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		-webkit-transition: all 0.25s ease
+		-o-transition: all 0.25s ease
+		transition: all 0.25s ease
+		span
+			text-align: center
+			margin: auto
+			font-size: 2rem
+			color: #fff
+		& ~ *
+			transition: all 0.25s ease
+		&.active
+			transition: all 0.25s ease
+			& ~ *
+				opacity: 0.5
+				filter: blur(5px)
+
+.callback-form
+	width: 100%
+	position: relative
+	margin-bottom: 2rem
+	margin-top: 3rem
+	font-weight: 400
+	.btn
+		cursor: pointer
+	input
+		width: 100%
+		margin-bottom: 1.75rem
+		background-color: transparent
+		border-top: none
+		border-right: none
+		border-left: none
+		border-bottom: 2px solid #cfcfcf
+		font-size: 1.125rem
+		padding: 0.5rem 2rem 0.5rem 0rem
+		font-family: $second-font
+		color: #221835
+		&:-moz-placeholder
+			color: #fff !important
+		&:focus
+			border-bottom: 2px solid #221835 !important
+		&:required
+			&:valid
+				border-bottom: 2px solid #221835 !important
+	label
+		font-size: 1.125rem
+		font-family: $second-font
+		color: #959595	
+	textarea
+		width: 100%
+		margin-bottom: 2rem
+		background-color: transparent
+		resize: none
+		border: 2px solid #cfcfcf
+		font-size: 1.125rem
+		padding: 0.5rem 2rem 0.5rem 0.5rem
+		font-family: $second-font
+		color: #221835
+		&:focus
+			border: 2px solid #221835 !important
+		&:required
+			&:valid
+				border: 2px solid #221835 !important
+	@include placeholder
+		color: #959595				
+	.form-success    
+		display: none
+		font-size: 2rem
+		font-family: $second-font
+		position: absolute
+		z-index: 11
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		-webkit-transition: all 0.25s ease
+		-o-transition: all 0.25s ease
+		transition: all 0.25s ease
+		span
+			text-align: center
+			margin: auto
+			font-size: 2.5rem
+			font-weight: 600
+			color: $a1
+		& ~ *
+			transition: all 0.25s ease
+		&.active
+			transition: all 0.25s ease
+			& ~ *
+				opacity: 0.5
+				filter: blur(5px)
+.advisors-carousel
+	.env-link-row
+		img
+			width: auto
+	.team-item
+		margin-bottom: 1rem
+		.env-name
+			font-weight: 600
+		.img-wrapper
+			.env-link-row
+				position: absolute
+				top: 0
+				right: -50px
+	.owl-dots
+		.owl-dot
+			span
+				background: #E8E8E8
+				transition: all 0.3s ease
+			&.active, &:hover
+				span
+					background: $a1	
+.team-carousel
+	margin-bottom: 1rem
+	.env-link-row
+		img
+			width: auto
+	.team-item
+		margin-bottom: 0rem
+		.env-desc
+			width: 90%
+			line-height: 1.3
+		.env-position
+			margin-bottom: 0.5rem	
+		.env-name
+			font-weight: 600
+		.img-wrapper
+			.env-link-row
+				position: absolute
+				top: 0
+				right: -50px
+	.owl-dots
+		.owl-dot
+			span
+				background: #E8E8E8
+				transition: all 0.3s ease
+			&.active, &:hover
+				span
+					background: $a1
+.partnerspage-carousel
+	.team-item
+		padding-left: 2.5rem
+		padding-right: 2.5rem
+		margin-bottom: 1.5rem
+	.owl-dots
+		.owl-dot
+			span
+				background: #E8E8E8
+				transition: all 0.3s ease
+			&.active, &:hover
+				span
+					background: $a1														
+/** Custom styles**/
+
+
+@import "media" // Always at the end

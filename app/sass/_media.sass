@@ -1,0 +1,211 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+	.section-title
+		margin-top: 4rem
+		padding-top: 1rem
+		font-size: 1.875rem
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 62px
+			height: 2px
+			background: $f1
+	.main-slide
+		h1
+			font-size: 2.25rem
+		.section-desc
+			&.team
+				width: 100%			
+	.section-desc
+		font-size: 1rem
+		width: 100%
+		margin-bottom: 2.5rem
+	.third-slide
+		.section-img-wrapper
+			margin-top: 0
+			margin-bottom: 2.8rem
+	.fifth-slide
+		.section-title
+			margin-bottom: 2.875rem
+		.sale-desc-wrapper
+			padding-top: 0
+			&:before
+				display: none
+		.sale-item
+			padding-top: 1.25rem
+			padding-bottom: 1.25rem
+			.second
+				font-size: 1.875rem
+		.legend-item
+			margin-bottom: 1.5rem
+	.seventh-slide
+		.section-title
+			margin-bottom: 3rem
+	.partners-page
+		.section-img-wrapper
+			img
+				padding-top: 1rem
+	.partnes-slide
+		.team-item
+			padding-left: 3rem
+			padding-right: 3rem
+			&:nth-child(3)
+				margin-right: auto
+			&:nth-child(6)
+				margin-right: auto
+			&:nth-child(9)
+				margin-right: auto
+	.join-slide
+		padding-bottom: 4.25rem
+		p
+			font-size: 1rem
+										
+// ≥992px
++media-breakpoint-down(md)
+	.second-slide
+		.section-img-wrapper
+			padding-top: 3.5rem
+	.press-item-wrapper
+		padding-bottom: 115%
+	.form-title
+		margin-top: 2rem
+	.fourth-slide
+		.section-desc
+			width: 90%
+	.team-item
+		.env-desc
+			width: 80%
+
+// ≥768px
++media-breakpoint-down(sm)
+	footer
+		padding-bottom: 1.5rem
+		.second-row
+			padding-top: 1rem
+		.copyright
+			margin-top: 1rem	
+	.column
+		margin-bottom: 3rem
+	.callback-form
+		.btn
+			width: 100%
+	.join-slide
+		padding-bottom: 2rem
+		p
+			font-size: 0.875rem
+	.partnes-slide
+		.team-item
+			padding-left: 2rem
+			padding-right: 2rem
+	.partners-carousel
+		margin-top: 2rem								
+// ≥576px
++media-breakpoint-down(xs)
+	.container-fluid
+		padding-left: 15px !important
+		padding-right: 15px !important
+	header
+		margin-top: 1.5rem
+	.mobile-navigation
+		.mobile-mnu-header
+			margin-top: 1.5rem		
+	.form-title
+		margin-top: 0rem
+	.main-callback-form	
+		width: 100%
+	.seventh-slide
+		margin-bottom: 2.875rem
+	.main-slide
+		h1
+			font-size: 1.875rem	
+	.section-title
+		margin-top: 3rem
+		font-size: 1.5rem
+		margin-bottom: 1.125rem
+	.section-desc
+		font-size: 0.875rem
+		margin-bottom: 1.5rem
+	.btn
+		display: block
+		text-align: center
+		&.simple
+			display: block
+	.fourth-slide
+		.section-desc
+			width: 100%
+	.canvas-wrapper
+		margin-bottom: 2rem
+	.fifth-slide
+		.legend-item
+			margin-left: 0
+			margin-bottom: 1rem
+			.box
+				height: 5px
+			.desc
+				font-size: 0.625rem	
+		.sale-item
+			border: none
+			padding-bottom: 0
+			.second
+				font-size: 1.5rem
+	.team-slide
+		.section-title
+			margin-bottom: 2.5rem
+	.advisors-slide
+		.section-title
+			margin-bottom: 2.5rem					
+	footer
+		.form-desc
+			width: 100%
+	.partnes-slide
+		.section-title
+			margin-bottom: 2.5rem
+	.animation
+		img
+			padding-bottom: 70px										
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+	.col-five
+		-webkit-box-flex: 0
+		-webkit-flex: 0 0 20%
+		-ms-flex: 0 0 20%
+		flex: 0 0 20%
+		max-width: 20%
+
+// ≤768px
++media-breakpoint-up(md)
+	.col-sm-five
+		-webkit-box-flex: 0
+		-webkit-flex: 0 0 20%
+		-ms-flex: 0 0 20%
+		flex: 0 0 20%
+		max-width: 20%
+
+// ≤992px
++media-breakpoint-up(lg)
+	.col-md-five
+		-webkit-box-flex: 0
+		-webkit-flex: 0 0 20%
+		-ms-flex: 0 0 20%
+		flex: 0 0 20%
+		max-width: 20%
+// ≤1200px
++media-breakpoint-up(xl)
+	.col-lg-five
+		-webkit-box-flex: 0
+		-webkit-flex: 0 0 20%
+		-ms-flex: 0 0 20%
+		flex: 0 0 20%
+		max-width: 20%
+
+	
